@@ -11,15 +11,21 @@ Plots a Echo Level vs. Range and Noise Masking Level vs. Range graph for the def
 
 ## Example Output
 
+### Default Parameters
+
 ![Default Parameters](/images/default.png)
 
 With the default parameters, the equation predicts that the sonar will be able to detect signal from noise until a range of about 830 m.
+
+### Calm Seas
 
 `python3 sonar.py plot -ss 0`
 
 ![Sea State Zero](/images/calmsea.png)
 
 With an inputted sea state of zero (completely calm and "glassy" ocean conditions), as opposed to the default sea state of 3, the equation predicts that the sonar will be able to detect signal from noise until a range of about 1080 m. This improvement is due to the decrease in noise masking level caused by a decrease in ocean swells and waves.
+
+### Lowered Transmitter Frequency
 
 `python3 sonar.py plot -f 20`
 
